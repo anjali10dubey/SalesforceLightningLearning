@@ -71,10 +71,12 @@
             <lightning-layout pull-to-boundary="medium">
                 <lightning-layout-item padding="horizontal-small" flexibility="grow">
                     <lightning-input type="text" 
-                    label="New task" 
+                    label="New Task" 
                     placeholder="Enter New Task" 
                     minlength="6" 
-                    variant="label-hidden"></lightning-input>
+                    variant="label-hidden"
+                    value={newTask}
+                    onchange={updateTask}></lightning-input>
                 </lightning-layout-item>
                 <lightning-layout-item padding="horizontal-small">
                     <lightning-button variant="Brand" label="New"></lightning-button>   
