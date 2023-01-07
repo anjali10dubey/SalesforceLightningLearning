@@ -1,3 +1,85 @@
 <template>
-    
+    <lightning-card title="ToDo List " icon-name="standard:task" style="width:100%">
+        <lightning-button-icon  
+        slot="actions" 
+        icon-name="utility:sync" 
+        variant="border-filled" 
+        alternative-text="Sync" 
+        title="Sync" >
+        </lightning-button-icon>
+        <p class="slds-p-around_small" ></p>
+        <lightning-layout  horizontal-align="space">
+            <lightning-layout-item padding="around-small" size="12">
+                <ul class="slds-has-dividers_around-space">
+                    <li class="slds-item">
+                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
+                            <lightning-layout-item padding="horizontal-small">
+                                List Item 1
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small">
+                                <lightning-button-icon icon-name="utility:delete"    
+                                alternative-text="Delete"   
+                                class="slds-m-left_xx-small" 
+                                title="Delete"></lightning-button-icon>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
+                            <lightning-layout-item padding="horizontal-small">
+                                List Item 2
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small">
+                                <lightning-button-icon icon-name="utility:delete"    
+                                alternative-text="Delete"   
+                                class="slds-m-left_xx-small" 
+                                title="Delete"></lightning-button-icon>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
+                            <lightning-layout-item padding="horizontal-small">
+                                List Item 3
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small">
+                                <lightning-button-icon icon-name="utility:delete"    
+                                alternative-text="Delete"   
+                                class="slds-m-left_xx-small" 
+                                title="Delete"></lightning-button-icon>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
+                            <lightning-layout-item padding="horizontal-small">
+                                List Item 4
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small">
+                                <lightning-button-icon icon-name="utility:delete"    
+                                alternative-text="Delete"   
+                                class="slds-m-left_xx-small" 
+                                title="Delete"></lightning-button-icon>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+       
+        <p slot="footer">
+            <lightning-layout pull-to-boundary="medium">
+                <lightning-layout-item padding="horizontal-small" flexibility="grow">
+                    <lightning-input type="text" 
+                    label="New task" 
+                    placeholder="Enter New Task" 
+                    minlength="6" 
+                    variant="label-hidden"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small">
+                    <lightning-button variant="Brand" label="New"></lightning-button>   
+                </lightning-layout-item>
+            </lightning-layout>  
+        </p>
+    </lightning-card>
 </template>
