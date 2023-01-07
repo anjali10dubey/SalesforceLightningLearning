@@ -11,10 +11,11 @@
         <lightning-layout  horizontal-align="space">
             <lightning-layout-item padding="around-small" size="12">
                 <ul class="slds-has-dividers_around-space">
-                    <li class="slds-item">
+                    <template for:each={TodoList} for:item="ToDoList">
+                       <li class="slds-item" key={ToDoList.id}>
                         <lightning-layout  vertical-align="center"  horizontal-align="spread">
                             <lightning-layout-item padding="horizontal-small">
-                                List Item 1
+                                {ToDoList.name} 
                             </lightning-layout-item>
                             <lightning-layout-item padding="horizontal-small">
                                 <lightning-button-icon icon-name="utility:delete"    
@@ -23,46 +24,8 @@
                                 title="Delete"></lightning-button-icon>
                             </lightning-layout-item>
                         </lightning-layout>
-                    </li>
-                    <li class="slds-item">
-                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
-                            <lightning-layout-item padding="horizontal-small">
-                                List Item 2
-                            </lightning-layout-item>
-                            <lightning-layout-item padding="horizontal-small">
-                                <lightning-button-icon icon-name="utility:delete"    
-                                alternative-text="Delete"   
-                                class="slds-m-left_xx-small" 
-                                title="Delete"></lightning-button-icon>
-                            </lightning-layout-item>
-                        </lightning-layout>
-                    </li>
-                    <li class="slds-item">
-                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
-                            <lightning-layout-item padding="horizontal-small">
-                                List Item 3
-                            </lightning-layout-item>
-                            <lightning-layout-item padding="horizontal-small">
-                                <lightning-button-icon icon-name="utility:delete"    
-                                alternative-text="Delete"   
-                                class="slds-m-left_xx-small" 
-                                title="Delete"></lightning-button-icon>
-                            </lightning-layout-item>
-                        </lightning-layout>
-                    </li>
-                    <li class="slds-item">
-                        <lightning-layout  vertical-align="center"  horizontal-align="spread">
-                            <lightning-layout-item padding="horizontal-small">
-                                List Item 4
-                            </lightning-layout-item>
-                            <lightning-layout-item padding="horizontal-small">
-                                <lightning-button-icon icon-name="utility:delete"    
-                                alternative-text="Delete"   
-                                class="slds-m-left_xx-small" 
-                                title="Delete"></lightning-button-icon>
-                            </lightning-layout-item>
-                        </lightning-layout>
-                    </li>
+                       </li>
+                   </template>
                 </ul>
             </lightning-layout-item>
         </lightning-layout>
@@ -79,7 +42,9 @@
                     onchange={updateTask}></lightning-input>
                 </lightning-layout-item>
                 <lightning-layout-item padding="horizontal-small">
-                    <lightning-button variant="Brand" label="New"></lightning-button>   
+                    <lightning-button variant="Brand" 
+                    label="New"
+                    onclick={addTask}></lightning-button>   
                 </lightning-layout-item>
             </lightning-layout>  
         </p>
